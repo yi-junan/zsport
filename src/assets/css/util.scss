@@ -1,0 +1,97 @@
+@function px2rem($px) {
+  @return $px / 120 + rem;
+}
+
+// 响应字体大小
+// 为什么不用rem ? 不想出现13、15之类奇怪的字体大小，以及不希望最小字体小于14
+@mixin fontSizeRespond($size, $minSize: 14) {
+  @media screen and (max-width: 1200px) {
+    @if ($size - 8) > $minSize {
+      font-size: $size - 8 + px;
+    } @else {
+      font-size: $minSize + px;
+    }
+  }
+  @media screen and (min-width: 1201px) and (max-width: 1400px) {
+    @if ($size - 6) > $minSize {
+      font-size: $size - 6 + px;
+    } @else {
+      font-size: $minSize + px;
+    }
+  }
+  @media screen and (min-width: 1401px) and (max-width: 1600px) {
+    @if ($size - 4) > $minSize {
+      font-size: $size - 4 + px;
+    } @else {
+      font-size: $minSize + px;
+    }
+  }
+  @media screen and (min-width: 1601px) and (max-width: 1800px) {
+    @if ($size - 2) > $minSize {
+      font-size: $size - 2 + px;
+    } @else {
+      font-size: $minSize + px;
+    }
+  }
+  @media screen and (min-width: 1801px) {
+    font-size: $size + px;
+  }
+}
+
+// 递减高度
+@mixin decreaseHeight($val) {
+  height: $val - 6 + px;
+
+  @media screen and (min-width: 1301px) and (max-width: 1400px) {
+    height: $val - 5 + px;
+  }
+
+  @media screen and (min-width: 1401px) and (max-width: 1500px) {
+    height: $val - 4 + px;
+  }
+
+  @media screen and (min-width: 1501px) and (max-width: 1600px) {
+    height: $val - 3 + px;
+  }
+
+  @media screen and (min-width: 1601px) and (max-width: 1700px) {
+    height: $val - 2 + px;
+  }
+
+  @media screen and (min-width: 1701px) and (max-width: 1800px) {
+    height: $val - 1 + px;
+  }
+
+  @media screen and (min-width: 1800px) {
+    height: $val + px;
+  }
+}
+
+// 递减宽度
+@mixin decreaseWidth($val) {
+  width: $val - 6 + px;
+
+  @media screen and (min-width: 1301px) and (max-width: 1400px) {
+    width: $val - 5 + px;
+  }
+
+  @media screen and (min-width: 1401px) and (max-width: 1500px) {
+    width: $val - 4 + px;
+  }
+
+  @media screen and (min-width: 1501px) and (max-width: 1600px) {
+    width: $val - 3 + px;
+  }
+
+  @media screen and (min-width: 1601px) and (max-width: 1700px) {
+    width: $val - 2 + px;
+  }
+
+  @media screen and (min-width: 1701px) and (max-width: 1800px) {
+    width: $val - 1 + px;
+  }
+
+  @media screen and (min-width: 1800px) {
+    width: $val + px;
+  }
+}

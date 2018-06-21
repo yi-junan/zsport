@@ -1,0 +1,56 @@
+@import './color.scss';
+@import './util.scss';
+
+* {
+  font-family: -apple-system, 'Helvetica Neue', Helvetica, Arial, 'PingFang SC',
+    'Hiragino Sans GB', 'WenQuanYi Micro Hei', 'Microsoft Yahei', sans-serif;
+}
+
+body {
+  overflow: hidden;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.limit {
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+
+  @media screen and (min-width: 1080px) and (max-width: 1300px) {
+    padding-left: calc(50% - 500px);
+    padding-right: calc(50% - 500px);
+  }
+
+  @media screen and (min-width: 1301px) and (max-width: 1400px) {
+    padding-left: calc(50% - 517px);
+    padding-right: calc(50% - 517px);
+  }
+
+  @media screen and (min-width: 1401px) and (max-width: 1500px) {
+    padding-left: calc(50% - 534px);
+    padding-right: calc(50% - 534px);
+  }
+
+  @media screen and (min-width: 1501px) and (max-width: 1600px) {
+    padding-left: calc(50% - 551px);
+    padding-right: calc(50% - 551px);
+  }
+
+  @media screen and (min-width: 1601px) and (max-width: 1700px) {
+    padding-left: calc(50% - 568px);
+    padding-right: calc(50% - 568px);
+  }
+
+  @media screen and (min-width: 1701px) and (max-width: 1800px) {
+    padding-left: calc(50% - 585px);
+    padding-right: calc(50% - 585px);
+  }
+
+  @media screen and (min-width: 1800px) {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+  }
+}
